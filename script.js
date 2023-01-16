@@ -52,6 +52,19 @@ const updateScore = function (score) {
   document.querySelector(".score").textContent = score;
 };
 
+/**
+ * Resetting values and DOM elements text
+ */
+const resetValues = function () {
+  gameOver = false;
+  gameWin = false;
+  score = 20;
+  displayMessage("Start guessing...");
+  // hide guessed number
+  document.querySelector(".number").textContent = "?";
+  document.querySelector(".guess").value = "";
+};
+
 // "check" button functionality
 document.querySelector(".check").addEventListener("click", function () {
   const guess = Number(document.querySelector(".guess").value);
@@ -97,14 +110,8 @@ document.querySelector(".check").addEventListener("click", function () {
 
 // "again" button functionality
 document.querySelector(".again").addEventListener("click", function () {
-  gameOver = false;
-  gameWin = false;
-  score = 20;
   secretNumber = generateRandomNumber(20);
+  resetValues();
   updateScore(score);
-  displayMessage("Start guessing...");
   setDefaultStyles();
-  // hide guessed number
-  document.querySelector(".number").textContent = "?";
-  document.querySelector(".guess").value = "";
 });
