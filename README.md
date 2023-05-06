@@ -13,4 +13,4 @@
 ![Lost event screenshot](https://github.com/TSlashDreamy/guess-my-number/blob/main/preview/3.jpeg?raw=true)
 
 -------
-This web application was replicated from the Udemy JavaScript course with modifications
+This web application was created from the Udemy JavaScript course with modifications
